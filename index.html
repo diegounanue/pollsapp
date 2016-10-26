@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Angular QuickStart</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="styles.css">
+
+	<!--css-->
+	<!--bootstrap-->
+	<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+	<link rel="stylesheet" href="css/bootstrap-theme/business-frontpage.css">
+	<link rel="stylesheet" href="external-libraries/material-bootstrap/css/bootstrap-material-design.css">
+	<link rel="stylesheet" href="external-libraries/material-bootstrap/css/ripples.css">
+	<!--<link rel="stylesheet" href="app/style.min.css">-->
+	<link rel="stylesheet" href="app/styles.css">
+	<link rel="stylesheet" href="bower_components/animate.css/animate.css">
+	<link rel="stylesheet" type="text/css" href="/node_modules/atoaster.css" />
+	<link rel="stylesheet" href="external-libraries/a2toastr/ng2-toastr.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<!--<link rel="stylesheet" href="bower_components/bootstrap-social/bootstrap-social.css">-->
+	<!--ng2-marterial design-->
+	<script src="https://rawgithub.com/systemjs/systemjs/0.19.6/dist/system.js"></script>
+	<link rel="stylesheet" href="https://cdn.rawgit.com/justindujardin/ng2-material/gh-pages/v/0.2.5/dist/ng2-material.css" />
+	<link rel="stylesheet" href="https://cdn.rawgit.com/justindujardin/ng2-material/gh-pages/v/0.2.5/dist/font.css" />
+
+	<!-- Polyfill(s) for older browsers -->
+	<script src="node_modules/core-js/client/shim.min.js"></script>
+
+	<script src="node_modules/zone.js/dist/zone.js"></script>
+	<script src="node_modules/reflect-metadata/Reflect.js"></script>
+	<script src="node_modules/systemjs/dist/system.src.js"></script>
+
+
+
+
+	<!--moment-->
+	<script src="node_modules/moment/moment.js"></script>
+
+	<!--pagination-->
+	<script src="node_modules/ng2-pagination/dist/ng2-pagination-bundle.js"></script>
+
+	<!--google api-->
+	<script src="https://apis.google.com/js/platform.js?onload=onLoad" async defer></script>
+
+	<!--aws-->
+	<script src="/node_modules/aws-sdk/dist/aws-sdk.js"></script>
+
+	<script type="text/javascript" src="external-libraries/apiGateway-js-sdk/apigClient.js"></script>
+
+	<script type="text/javascript" src="external-libraries/apiGateway-js-sdk/lib/axios/dist/axios.standalone.js"></script>
+	<script type="text/javascript" src="external-libraries/apiGateway-js-sdk/lib/CryptoJS/rollups/hmac-sha256.js"></script>
+	<script type="text/javascript" src="external-libraries/apiGateway-js-sdk/lib/CryptoJS/rollups/sha256.js"></script>
+	<script type="text/javascript" src="external-libraries/apiGateway-js-sdk/lib/CryptoJS/components/hmac.js"></script>
+	<script type="text/javascript" src="external-libraries/apiGateway-js-sdk/lib/CryptoJS/components/enc-base64.js"></script>
+	<script type="text/javascript" src="external-libraries/apiGateway-js-sdk/lib/url-template/url-template.js"></script>
+	<script type="text/javascript" src="external-libraries/apiGateway-js-sdk/lib/apiGatewayCore/sigV4Client.js"></script>
+	<script type="text/javascript" src="external-libraries/apiGateway-js-sdk/lib/apiGatewayCore/apiGatewayClient.js"></script>
+	<script type="text/javascript" src="external-libraries/apiGateway-js-sdk/lib/apiGatewayCore/simpleHttpClient.js"></script>
+	<script type="text/javascript" src="external-libraries/apiGateway-js-sdk/lib/apiGatewayCore/utils.js"></script>
+	<script type="text/javascript" src="external-libraries/apiGateway-js-sdk/apigClient.js"></script>
+
+	<script src="systemjs.config.js"></script>
+	<script>
+      System.import('app').catch(function(err){ console.error(err); });
+    </script>
+</head>
+
+<body>
+	<my-app>Loading...</my-app>
+</body>
+
+</html>

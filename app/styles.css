@@ -1,0 +1,239 @@
+.flex-center {
+    display: flex;
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .sm-flex-center {
+        display: flex;
+        align-items: center;
+    }
+}
+
+@media (min-width: 992px) {
+    .md-flex-center {
+        display: flex;
+        align-items: center;
+    }
+}
+
+@media (min-width: 1200px) {
+    .lg-flex-center {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.navbar.navbar-inverse {
+    background-color: #ffffff;
+    color: #ffffff;
+}
+
+.panel.panel-primary > .panel-heading {
+    background-color: #2F3837;
+}
+
+.image-size {
+    height: 250px;
+}
+
+�
+/* Credit to bootsnipp.com for the css for the color graph */
+
+.colorgraph {
+    height: 5px;
+    border-top: 0;
+    background: #c4e17f;
+    border-radius: 5px;
+    background-image: -webkit-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+    background-image: -moz-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+    background-image: -o-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+    background-image: linear-gradient(to right, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+}
+
+.log-off {
+    float: right;
+    color: black;
+}
+
+.font-poll-countdown {
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    color: #5E4C4C;
+    font-size: 21;
+    padding: 5;
+    font-weight: bold;
+}
+
+.box-of-stuff {
+    border: 1px solid #BEBEBE;
+    padding: 1em;
+    min-height: 250px;
+}
+
+html, body {
+    height: 100%;
+    background-color: #023C99 !important;
+    background-image: url(../assets/images/pattern3.png) !important;
+}
+
+header {
+    background-color: white;
+}
+
+.container {
+    margin-bottom: 100px;
+}
+
+footer {
+    background-color: #383838;
+    position: fixed;
+    bottom: 0;
+    height: 100px;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.app-title {
+    font-size: 60px;
+    color: white;
+}
+
+.center-content {
+    text-align: center;
+    height: 200px;
+    width: 400px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -100px;
+    margin-left: -200px;
+    cursor: pointer;
+}
+
+.panel-not-selected {
+    background-color: rgba(226, 226, 226, 0.4);
+}
+
+.panel-selected {
+    background-color: rgba(211, 225, 175, 0.85);
+}
+
+.panel-footer {
+    background-color: #383838;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top: none;
+}
+
+.generalIcons {
+    text-align: center;
+    color: white;
+    margin-top: 10px;
+}
+
+
+/* NO BORRRAR PIPE */
+
+.poll-table {
+    background-color: white;
+}
+
+.poll {}
+
+.poll .poll-name {}
+
+.poll .poll-users {
+    display: block;
+    padding-top: 5px;
+}
+
+.poll .poll-users .poll-user {
+    display: inline-block;
+}
+
+.poll .poll-users .poll-user .poll-user-avatar {
+    height: 20px;
+}
+
+.poll .poll-status .status {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: normal;
+    border: none;
+    border-radius: 8px;
+    margin: 10px 0px;
+    padding: 11px 30px;
+}
+
+.poll .poll-status .status.status-closed {
+    background-color: #83AAE5;
+}
+.poll .poll-status .status.status-open {
+    background-color: #D3E1AF;
+}
+.poll .poll-status .status.status-not-open {
+    background-color: #AAAAAA;
+}
+
+.btn.btn-raised.btn-vote {
+    background-color: #4DD0E1;
+    color: #ffffff;
+}
+.btn.btn-raised.btn-result {
+    background-color: #0D47A1;
+    color: #ffffff;
+}
+
+.pagination-previous, .pagination-next, .ng2-pagination a{
+    display: inline-block !important;
+    font-size: 14px !important;
+    font-weight: bold !important;
+    border: none !important;
+    margin: 10px 0px !important;
+    color: white !important;
+    cursor: pointer;
+    padding: 3px !important;
+}
+
+.ng2-pagination{
+    padding-left: 0  !important;
+}
+
+.ng2-pagination a:hover, .ng2-pagination button:hover{
+    background: none !important;
+    padding: 3px !important;
+}
+
+
+.current{
+    padding: 3px !important;
+    font-size: 14px !important;
+    font-weight: bold !important;
+}
+
+.logout-div {
+    margin-top: 20px;
+}
+.logout-div .logout-button {
+    color: #ffffff;
+}
+.logout-div .logout-button:hover {
+    text-decoration: none;
+}
+.login-text {
+    margin-top: 10px;
+}
+
+.header-app{
+    margin-bottom: 100px !important;
+}
+
+.date-picker input {
+    width: 100% !important;
+}
+
+.div-margin-top{
+
+    margin-top:65px;
+}

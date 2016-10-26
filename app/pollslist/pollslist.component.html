@@ -1,0 +1,47 @@
+﻿<title-header title-page="Polls" display-backbutton="false" display-logoutbutton="true"></title-header>
+<div class="row">
+    <div class="col-md-12">
+        <table class="table dataTable poll-table">
+            <thead>
+                <tr>
+                    <th>Poll Name</th>
+                    <th>Date</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let poll of polls | paginate: { itemsPerPage:10, currentPage: page }" class="poll">
+                    <td>
+                        <div class="poll-name">{{poll.poll_name}}</div>
+                        <div class="poll-users">
+                            <div *ngFor="let vote of poll.users_that_voted" class="poll-user" data-toggle="tooltip" title="{{vote.userName}}">
+                                <img *ngIf="vote.userImage" alt="{{vote.userName}}" class="img-responsive poll-user-avatar" src="{{vote.userImage}}">
+                                <img *ngIf="!vote.userImage || vote.userImage === 'undefined'" alt="{{vote.userName}}" class="img-responsive poll-user-avatar" src="http://freevector.co/wp-content/uploads/2012/06/70472-profile-avatar-user.png">
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="poll-status">
+                            <span class="label status success">{{poll.open_date | date }}</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="poll-status">
+                            <span *ngIf="poll.open === true && poll.open_date < today" class="label status status-open">{{poll.timeMsg}}</span>
+                            <span *ngIf="poll.open === true && today < poll.open_date" class="label status status-not-open">{{poll.timeMsg}}</span>
+                            <span *ngIf="poll.open === false" class="label status status-closed">Closed</span>
+                        </div>
+                    </td>
+                    <td>
+                        <button *ngIf="poll.open === true && poll.open_date < today" type="button" class="btn btn-raised btn-vote" [routerLink]="['VotePoll', {id: poll.pollId}]"> &nbsp; Vote &nbsp; </button>
+                        <button *ngIf="poll.open === false" type="button" class="btn btn-raised btn-result" [routerLink]="['Results', {id: poll.pollId}]"> Result </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="col-md-12 text-center">
+        <pagination-controls (pageChange)="page = $event " [maxSize]="maxSize" [directionLinks]="directionLinks" [autoHide]="autoHide"></pagination-controls>
+    </div>
+</div>

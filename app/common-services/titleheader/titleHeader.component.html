@@ -1,0 +1,20 @@
+﻿<div class="row header-app">
+    <div class="col-md-3 logout-div">
+        <a href="#" *ngIf="displayBackButton" class="logout-button" (click)="backClicked()">
+            <i class="fa fa-arrow-left fa-2x"></i> &nbsp;&nbsp;Polls
+
+        </a>
+
+    </div>
+    <div class="col-md-6 text-center"><label class="app-title">{{titlePage}}</label></div>
+    <div class="pull-right text-center logout-div">
+        <a href="#" *ngIf="displayLogoutButton" (click)="signOut();" id="logoutbtn" class="logout-button text-center">
+            <i class="fa fa-power-off fa-2x"></i>
+            <br>
+            <span>Logout</span>
+        </a>
+
+    </div>
+
+</div>
+
