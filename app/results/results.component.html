@@ -1,0 +1,26 @@
+<title-header title-page="Result" display-backbutton="true" display-logoutbutton="true"></title-header>
+<div class="row">
+    <div class="col-md-6" [ngClass]="{'col-md-offset-3': numberWinners === 1}" *ngFor="let item of winners">
+        <div class="panel panel-selected">
+            <div class="panel-body">
+                <div><img class="img-responsive image-size center-block" [src]="item.image_url"></div>
+            </div>
+            <div class="panel-footer" style="color: white; text-align: center;"><b>{{item.option}}&nbsp;-&nbsp;{{item.votes}}&nbsp;Votes  </b></div>
+        </div>
+
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col-md-12">
+        <div [ngClass]="{'col-md-4': col4number === '4', 'col-md-6': col4number === '' }" *ngFor="let item of result">
+            <div class="panel">
+                <div class="panel-body">
+                    <div><img class="img-responsive image-size center-block" [src]="item.image_url"></div>
+                </div>
+                <div class="panel-footer" style="color: white; text-align: center;"><b>{{item.option}}&nbsp;-&nbsp;{{item.votes}}&nbsp;Votes </b></div>
+            </div>
+        </div>
+    </div>
+</div>

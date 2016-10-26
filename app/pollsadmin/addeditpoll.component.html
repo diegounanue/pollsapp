@@ -1,0 +1,116 @@
+﻿<title-header title-page="Add Polls" display-backbutton="true"></title-header>
+
+<!--<date-time-picker (sharedVarParent)="updateParent($event)"></date-time-picker>
+
+<div>Parent sharedVarParent: {{sharedVarParent}}</div>-->
+
+<div class="panel panel-default" style="margin-top: 55px">
+    <div class="panel-heading"><i class="fa fa-th-large" aria-hidden="true"></i> Add Polls</div>
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-md-12">
+                <form class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">
+                            Poll Name
+                        </label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" [(ngModel)]="pollNameProp" name="pollNameProp"/>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-md-2 control-label"  style="margin-top:65px;">
+                            Open Date
+                        </label>
+                        <div class="col-md-10">
+                            <div class="col-md-8 div-margin-top">
+                                <datepicker class="col-md-8" style="text-align:center !important" [(ngModel)]="openDateProp" name="openDateProp"></datepicker>
+                            </div>
+                            <div class="col-md-4 pull-right">
+                                <timepicker class="date-picker" [(ngModel)]="openDateTimeProp" (change)="changed()" [hourStep]="hstep" [minuteStep]="mstep" [showMeridian]="ismeridian" name="openDateTimeProp"></timepicker>
+                                <!--<datepicker [(ngModel)]="openDateProp" view-value="DD.MM.YYYY" model-value="DD.MM.YYYY" init-date="12.5.2017"></datepicker>-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-2 control-label" style="margin-top:65px;">
+                            Close Date
+                        </label>
+                        <div class="col-md-10">
+                            <div class="col-md-8 div-margin-top">
+                                <datepicker class="col-md-8" [(ngModel)]="closeDateProp" name="closeDateProp"></datepicker>
+                            </div>
+                            <div class="col-md-4 pull-right">
+                                <timepicker class="date-picker" [(ngModel)]="closeDateTimeProp" (change)="changed()" [hourStep]="hstep" [minuteStep]="mstep" [showMeridian]="ismeridian" name="closeDateTimeProp"></timepicker>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <div class="box-of-stuff">
+                    <form class="form-horizontal" (submit)="addOption()">
+                        <span>Options</span>
+                        <div class="form-group">
+                            <label for="inputEmail3" class="col-sm-2 control-label">
+                                Option Name
+                            </label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" [(ngModel)]="optionNameProp" name="optionNameProp"/>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">
+                                Image Source
+                            </label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" [(ngModel)]="optionImgSrcProp" name="optionImgSrcProp"/>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-sm-offset-10 col-sm-2">
+                                <button type="submit" class="btn btn-default">
+                                    Add Option
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>
+                                    Poll Name
+                                </th>
+                                <th>
+                                    Image Source
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let item of pollOptions">
+                                <td>
+                                    {{item.option}}
+                                </td>
+                                <td>
+                                    {{item.image_url}}
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-sm-offset-10 col-sm-2">
+                    <button type="button" class="btn btn-default" (click)="addPoll()">
+                        Add Poll
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

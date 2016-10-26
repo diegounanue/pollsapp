@@ -8,13 +8,14 @@ export class AuthenticationService {
         if (localStorage.getItem('id')) {
             return true;
         } else {
+            location.reload();
             return false;
         }
+    };
 
-    }
     logout() {
         this._router.navigate(['Login', {logout: 'true'}]);
         //location.reload();
         //window.location = "#/login?logout=true";
-    }
+    };
 }

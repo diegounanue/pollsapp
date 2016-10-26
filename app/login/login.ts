@@ -43,7 +43,7 @@ export class Login {
                 }
             }
         });
-    }
+    };
 
     initAuth2 = (cb) => {
         // Retrieve the singleton for the GoogleAuth library and set up the client.
@@ -59,7 +59,7 @@ export class Login {
                 cb(auth2);
             }
         });
-    }
+    };
 
     getParameterByName = (name) => {
         var url = window.location.href;
@@ -79,7 +79,7 @@ export class Login {
             function (error) {
                 console.log(JSON.stringify(error, undefined, 2));
             });
-    }
+    };
 
     onUserLoggedIn = (auth2, googleUser) => {
         var profile = googleUser.getBasicProfile();
@@ -126,7 +126,7 @@ export class Login {
             localStorage.setItem('sessionToken', AWS.config.credentials.sessionToken);
             this.zoneImpl.run(() => this._router.navigate(['polls']));
         });
-    }
+    };
 
     signOut = (auth2) => {
         auth2.signOut().then(() => {
@@ -138,6 +138,6 @@ export class Login {
             localStorage.removeItem('secretAccessKey');
             localStorage.removeItem('sessionToken');
         });
-    }
+    };
 
 }
