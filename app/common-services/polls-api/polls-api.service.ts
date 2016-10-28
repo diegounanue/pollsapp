@@ -31,7 +31,7 @@ export class PollsApi {
                 this.apigClient = apigClientFactory.newClient(credentialsParam);
             } else {
                 sessionStorage.clear();
-                this.zoneImpl.run(() => this._router.navigate(['Login']));
+                this.zoneImpl.run(() => this._router.navigate(['login']));
                 localStorage.removeItem('region');
                 localStorage.removeItem('accessKeyId');
                 localStorage.removeItem('secretAccessKey');

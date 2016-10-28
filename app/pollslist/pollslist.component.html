@@ -34,7 +34,7 @@
                         </div>
                     </td>
                     <td>
-                        <button *ngIf="poll.open === true && poll.open_date < today" type="button" class="btn btn-raised btn-vote" [routerLink]="['VotePoll', {id: poll.pollId}]"> &nbsp; Vote &nbsp; </button>
+                        <button *ngIf="poll.open === true && poll.open_date < today" type="button" class="btn btn-raised btn-vote" routerLink="/votepoll/{{poll.pollId}}"> &nbsp; Vote &nbsp; </button>
                         <button *ngIf="poll.open === false" type="button" class="btn btn-raised btn-result" routerLink="/results/{{poll.pollId}}"> Result </button>
                     </td>
                 </tr>

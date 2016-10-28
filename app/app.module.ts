@@ -19,6 +19,8 @@ import { LoggedInGuard } from './loggedInGuard';
 import { AuthenticationService } from './common-services/authentication/authentication.service';
 import { ResultsComponent } from './results/results.component'
 import { PollsApi } from './common-services/polls-api/polls-api.service';
+import { VotingCardsListComponent } from './votingcards/votingcards-list.component'
+import { VotingCardsComponent } from './votingcards/votingcards.component'
 
 //Admin
 import { AddEditPollComponent } from './pollsadmin/addeditpoll.component';
@@ -29,7 +31,7 @@ import { DatepickerModule, TimepickerModule, Ng2BootstrapModule }   from 'ng2-bo
 const routes: Routes = [
 
 ];
-
+VotingCardsComponent
 
 @NgModule({
   declarations: [
@@ -40,7 +42,9 @@ const routes: Routes = [
     TitleHeader,
     Profile,
     ResultsComponent,
-    AddEditPollComponent
+    AddEditPollComponent,
+    VotingCardsListComponent,
+    VotingCardsComponent
   ],
   imports: [
     BrowserModule,

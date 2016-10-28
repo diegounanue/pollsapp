@@ -35,7 +35,7 @@ export class Login {
                 this.signOut(auth2);
             } else {
                 if (auth2.isSignedIn.get()) {
-                    this.zoneImpl.run(() => this._router.navigate(['Polls']));
+                    this.zoneImpl.run(() => this._router.navigate(['polls']));
                 }
                 else {
                     // try forcing user signin

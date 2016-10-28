@@ -1,0 +1,24 @@
+<!--the result is-->
+<!--{{voteDate}}-->
+<title-header title-page="Vote" display-backbutton="true" display-logoutbutton="true"></title-header>
+<my-spinner [isRunning]="showSpinner"></my-spinner>
+<div class="row">
+    <div class="col-md-12">
+        <div [ngClass]="{'col-md-4': col4number === '4', 'col-md-6': col4number === '' }" *ngFor="let item of votingCards">
+            <!--<div class="clearfix" *ngIf="i % 3 == 0"></div>-->
+
+            <div class="panel" [ngClass]="{'panel-not-selected': !item.selected, 'panel-selected animated bounceIn': item.selected}"
+                style="cursor: pointer" (click)="onCardClick(item)">
+                <div class="panel-body">
+                    <div><img class="img-responsive image-size center-block" [src]="item.image_url"></div>
+                </div>
+                <div class="panel-footer" style="color: white; text-align: center;"><b>{{item.option | uppercase}}</b></div>
+            </div>
+
+        </div>
+    </div>
+    <div class="col-md-4 col-md-offset-4 text-center">
+        <input type="button" class="btn btn-raised btn-default" value="VOTE" (click)="submitVote()" *ngIf="!textAlreadyVoted && showdisplaybutton"/>
+        <label *ngIf="textAlreadyVoted"> <b style="color: white;">You have already voted </b></label>
+    </div>
+</div>
