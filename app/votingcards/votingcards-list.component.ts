@@ -3,7 +3,7 @@ import { Card, VotingCardsService, Vote, CardList} from './votingcards.service';
 import { CanActivate, Router, ActivatedRoute,
          ActivatedRouteSnapshot,
          RouterStateSnapshot }    from '@angular/router';
-//import { ToastsManager } from 'ng2-toastr/ng2-toastr';
+import { ToastsManager } from 'ng2-toastr/ng2-toastr';
 import { TitleHeader } from '../common-services/titleheader/titleHeader.component';
 import { SpinnerComponent } from '../common-services/spinner/spinner';
 import { PollsApi } from '../common-services/polls-api/polls-api.service';
@@ -30,7 +30,7 @@ export class VotingCardsListComponent implements OnInit {
     constructor(
         private _votingCardsService: VotingCardsService,
         private route: ActivatedRoute,
-        //public toastr: ToastsManager,
+        public toastr: ToastsManager,
         private _router: Router,
         private _pollsApi: PollsApi
     ) { }
@@ -111,10 +111,8 @@ export class VotingCardsListComponent implements OnInit {
             this.vote.userImage = localStorage.getItem('imageUrl');
         }
 
-        //this.getPollById(this.id);
-
         if (!this.isPollOpen) {
-            //this.toastr.error('No puedes votar, ya encuesta ya cerro!', 'Opps!!');
+            this.toastr.error('No puedes votar, ya encuesta ya cerro!', 'Opps!!');
             this.isRequesting = false;
             return;
         }
@@ -125,13 +123,13 @@ export class VotingCardsListComponent implements OnInit {
     submitCodeComplete(res) {
         this.showSpinner = false;        
         if (!res) {
-            //this.toastr.error('There was an error trying to submit your vote. Please refresh the page and try again.', 'Error!')
+            this.toastr.error('There was an error trying to submit your vote. Please refresh the page and try again.', 'Error!')
         }
         else if (res.errorMessage) {
-            //this.toastr.error('You have already voted!', 'Error!')
+            this.toastr.error('You have already voted!', 'Error!')
         } else {
             this.showdisplaybutton = false;
-            //this.toastr.success('We have received your vote. You will be automatically redirected to Polls page in few seconds.', 'Thanks!')
+            this.toastr.success('We have received your vote. You will be automatically redirected to Polls page in few seconds.', 'Thanks!')
             this._router.navigate(['polls']);
         }
     };

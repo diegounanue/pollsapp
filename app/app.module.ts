@@ -6,7 +6,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Routes, RouterModule } from '@angular/router';
 import { HttpModule, JsonpModule, Http } from '@angular/http';
 import { Ng2PaginationModule } from 'ng2-pagination';
-
+import { ToastModule } from 'ng2-toastr/ng2-toastr';
 import { AppComponent } from './app.component';
 
 
@@ -31,8 +31,6 @@ import { DatepickerModule, TimepickerModule, Ng2BootstrapModule }   from 'ng2-bo
 const routes: Routes = [
 
 ];
-VotingCardsComponent
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -58,7 +56,8 @@ VotingCardsComponent
     Ng2BootstrapModule,
     Ng2PaginationModule,
     DatepickerModule,
-    TimepickerModule
+    TimepickerModule,
+    ToastModule
   ],
   providers: [LoggedInGuard, AuthenticationService, PollsApi],
   bootstrap: [AppComponent]
